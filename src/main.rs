@@ -4,7 +4,7 @@
 extern crate rustyline;
 extern crate yalp;
 
-use yalp::evaluator::State;
+use yalp::State;
 use yalp::parse::parse_lisp_string;
 
 const PRELUDE: &'static [&'static str] = &[

@@ -17,7 +17,7 @@ enum Token {
     OpVar(String),
 }
 
-// Token Iterator.
+/// Token Iterator
 struct Tokens<'a> {
     chars: Peekable<Chars<'a>>,
 }
@@ -64,7 +64,6 @@ impl<'a> Iterator for Tokens<'a> {
         }
 
         while let Some(c) = self.chars.next() {
-            // FIXME: this reads poorly
             return match c {
                 '(' => Some(Token::OpenParen),
                 ')' => Some(Token::CloseParen),
